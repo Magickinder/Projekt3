@@ -1,0 +1,368 @@
+Archive member included because of file (symbol)
+
+/usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o (__libc_csu_init)
+
+Allocating common symbols
+Common symbol       size              file
+
+coins               0x4b0             CMakeFiles/server.dir/functions.c.o
+treasures           0x3c              CMakeFiles/server.dir/functions.c.o
+players             0x28              CMakeFiles/server.dir/functions.c.o
+l_treasures         0x24              CMakeFiles/server.dir/functions.c.o
+info_window         0x8               CMakeFiles/server.dir/functions.c.o
+map_window          0x8               CMakeFiles/server.dir/functions.c.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 CMakeFiles/server.dir/functions.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 CMakeFiles/server.dir/main.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+
+Memory map
+
+ ** file header
+                0x0000000000000000       0x40
+ ** segment headers
+                0x0000000000000040      0x1f8
+
+.interp         0x0000000000000238       0x1c
+ ** fill        0x0000000000000238       0x1c
+
+.note.ABI-tag   0x0000000000000254       0x20
+ .note.ABI-tag  0x0000000000000254       0x20 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+
+.note.gnu.build-id
+                0x0000000000000274       0x24
+ ** note header
+                0x0000000000000274       0x10
+ ** zero fill   0x0000000000000284       0x14
+
+.dynsym         0x0000000000000298      0x360
+ ** dynsym      0x0000000000000298      0x360
+
+.dynstr         0x00000000000005f8      0x1d3
+ ** string table
+                0x00000000000005f8      0x1d3
+
+.gnu.hash       0x00000000000007d0       0x24
+ ** hash        0x00000000000007d0       0x24
+
+.gnu.version    0x00000000000007f4       0x48
+ ** versions    0x00000000000007f4       0x48
+
+.gnu.version_r  0x000000000000083c       0xa0
+ ** version refs
+                0x000000000000083c       0xa0
+
+.rela.dyn       0x00000000000008e0       0xd8
+ ** dynamic relocs
+                0x00000000000008e0       0xd8
+
+.rela.plt       0x00000000000009b8      0x2d0
+ ** dynamic relocs
+                0x00000000000009b8      0x2d0
+
+.init           0x0000000000000c88       0x17
+ .init          0x0000000000000c88       0x12 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+                0x0000000000000c88                _init
+ .init          0x0000000000000c9a        0x5 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+
+.plt            0x0000000000000ca0      0x1f0
+ ** PLT         0x0000000000000ca0      0x1f0
+
+.text           0x0000000000000e90     0x1b91
+ .text          0x0000000000000e90       0x2b /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+                0x0000000000000e90                _start
+ .text          0x0000000000000ebb        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+ ** fill        0x0000000000000ebb        0x5
+ .text          0x0000000000000ec0       0xb5 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+ .text          0x0000000000000f75     0x1812 CMakeFiles/server.dir/functions.c.o
+                0x0000000000000f75                init_ncurses
+                0x0000000000001059                refresh_all
+                0x000000000000108d                print_map
+                0x0000000000001121                init_players
+                0x00000000000011ff                print_players
+                0x00000000000012b5                init_objects
+                0x00000000000019ea                print_coins
+                0x0000000000001e15                print_campsite
+                0x0000000000001ecf                print_bushes
+                0x00000000000020fc                print_info
+                0x0000000000002508                handle_signal
+                0x00000000000026a0                send_map
+ .text          0x0000000000002787      0x231 CMakeFiles/server.dir/main.c.o
+                0x0000000000002787                main
+ ** fill        0x00000000000029b8        0x8
+ .text          0x00000000000029c0       0x61 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                0x00000000000029c0                __libc_csu_init
+                0x0000000000002a20                __libc_csu_fini
+ .text          0x0000000000002a21        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+ .text          0x0000000000002a21        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+
+.fini           0x0000000000002a24        0x9
+ .fini          0x0000000000002a24        0x4 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+                0x0000000000002a24                _fini
+ .fini          0x0000000000002a28        0x5 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+
+.rodata         0x0000000000002a40     0x2ac6
+ ** merge constants
+                0x0000000000002a40        0x4
+ .rodata        0x0000000000002a60     0x2a15 CMakeFiles/server.dir/functions.c.o
+                0x0000000000002a60                map
+ .rodata        0x0000000000005478       0x8e CMakeFiles/server.dir/main.c.o
+
+.eh_frame       0x0000000000005508      0x274
+ ** eh_frame    0x0000000000005508      0x270
+ .eh_frame      0x0000000000005778        0x4 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+
+.eh_frame_hdr   0x000000000000577c       0x94
+ ** eh_frame_hdr
+                0x000000000000577c       0x94
+
+.fini_array     0x0000000000006d90        0x8
+ .fini_array    0x0000000000006d90        0x8 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+
+.init_array     0x0000000000006d98        0x8
+ .init_array    0x0000000000006d98        0x8 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+
+.dynamic        0x0000000000006da0      0x220
+ ** dynamic     0x0000000000006da0      0x220
+
+.got            0x0000000000006fc0       0x28
+ ** GOT         0x0000000000006fc0       0x28
+
+.got.plt        0x0000000000006fe8      0x108
+ ** GOT PLT     0x0000000000006fe8      0x108
+ ** GOT IRELATIVE PLT
+                0x00000000000070f0        0x0
+ ** GOT         0x00000000000070f0        0x0
+
+.data           0x00000000000070f0       0x10
+ .data          0x00000000000070f0        0x4 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+                0x00000000000070f0                data_start
+                0x00000000000070f0                __data_start
+ .data          0x00000000000070f4        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+ .data          0x00000000000070f4        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+ .data.rel.local
+                0x00000000000070f8        0x8 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+                0x00000000000070f8                __dso_handle
+ .data          0x0000000000007100        0x0 CMakeFiles/server.dir/functions.c.o
+ .data          0x0000000000007100        0x0 CMakeFiles/server.dir/main.c.o
+ .data          0x0000000000007100        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .data          0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+ .data          0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+
+.tm_clone_table
+                0x0000000000007100        0x0
+ .tm_clone_table
+                0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+ .tm_clone_table
+                0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+                0x0000000000007100                __TMC_END__
+
+.bss            0x0000000000007100      0x5a8
+ .bss           0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+ .bss           0x0000000000007100        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+ .bss           0x0000000000007100        0x1 /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+ .bss           0x0000000000007101        0x0 CMakeFiles/server.dir/functions.c.o
+ .bss           0x0000000000007101        0x0 CMakeFiles/server.dir/main.c.o
+ .bss           0x0000000000007101        0x0 /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+ .bss           0x0000000000007101        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+ .bss           0x0000000000007101        0x0 /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crtn.o
+ ** common      0x0000000000007120      0x578
+ ** dynbss      0x00000000000076a0        0x8
+
+.comment        0x0000000000000000       0x1d
+ ** merge strings
+                0x0000000000000000       0x1d
+
+.debug_info     0x0000000000000000     0x1b4c
+ .debug_info    0x0000000000000000      0xecb CMakeFiles/server.dir/functions.c.o
+ .debug_info    0x0000000000000ecb      0xc81 CMakeFiles/server.dir/main.c.o
+
+.debug_abbrev   0x0000000000000000      0x44f
+ .debug_abbrev  0x0000000000000000      0x27d CMakeFiles/server.dir/functions.c.o
+ .debug_abbrev  0x000000000000027d      0x1d2 CMakeFiles/server.dir/main.c.o
+
+.debug_aranges  0x0000000000000000       0x60
+ .debug_aranges
+                0x0000000000000000       0x30 CMakeFiles/server.dir/functions.c.o
+ .debug_aranges
+                0x0000000000000030       0x30 CMakeFiles/server.dir/main.c.o
+
+.debug_line     0x0000000000000000      0x9d3
+ .debug_line    0x0000000000000000      0x77c CMakeFiles/server.dir/functions.c.o
+ .debug_line    0x000000000000077c      0x257 CMakeFiles/server.dir/main.c.o
+
+.debug_str      0x0000000000000000      0x865
+ ** merge strings
+                0x0000000000000000      0x865
+
+.note.gnu.gold-version
+                0x0000000000000000       0x1c
+ ** note header
+                0x0000000000000000       0x10
+ ** fill        0x0000000000000010        0x9
+ ** zero fill   0x0000000000000019        0x3
+
+.symtab         0x0000000000000000      0x828
+ ** symtab      0x0000000000000000      0x828
+
+.strtab         0x0000000000000000      0x3ea
+ ** string table
+                0x0000000000000000      0x3ea
+
+.shstrtab       0x0000000000000000      0x16a
+ ** string table
+                0x0000000000000000      0x16a
+
+Cross Reference Table
+
+Symbol                                            File
+_GLOBAL_OFFSET_TABLE_                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+                                                  CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+                                                  /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+_IO_stdin_used                                    /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+_ITM_deregisterTMCloneTable                       /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libtinfo.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/librt.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/libgcc_s.so.1
+_ITM_registerTMCloneTable                         /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libtinfo.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/librt.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/libgcc_s.so.1
+__TMC_END__                                       /usr/lib/gcc/x86_64-linux-gnu/8/crtendS.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+__assert_fail                                     CMakeFiles/server.dir/main.c.o
+__cxa_finalize                                    /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+__data_start                                      /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+__dso_handle                                      /usr/lib/gcc/x86_64-linux-gnu/8/crtbeginS.o
+__gmon_start__                                    /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libtinfo.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/librt.so
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/libgcc_s.so.1
+__init_array_end                                  /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+__init_array_start                                /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+__libc_csu_fini                                   /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+__libc_csu_init                                   /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+__libc_start_main@@GLIBC_2.2.5                    /lib/x86_64-linux-gnu/libc.so.6
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+_fini                                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+_init                                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/crti.o
+                                                  /usr/lib/x86_64-linux-gnu/libc_nonshared.a(elf-init.oS)
+_start                                            /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+cbreak@@NCURSES6_TINFO_5.0.19991023               /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libtinfo.so
+                                                  CMakeFiles/server.dir/functions.c.o
+close@@GLIBC_2.2.5                                /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  CMakeFiles/server.dir/main.c.o
+                                                  /lib/x86_64-linux-gnu/libc.so.6
+coins                                             CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+curs_set@@NCURSES6_TINFO_5.0.19991023             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libtinfo.so
+                                                  CMakeFiles/server.dir/functions.c.o
+data_start                                        /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+endwin@@NCURSES6_5.0.19991023                     /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/main.c.o
+ftruncate@@GLIBC_2.2.5                            /lib/x86_64-linux-gnu/libc.so.6
+                                                  CMakeFiles/server.dir/main.c.o
+getpid                                            CMakeFiles/server.dir/functions.c.o
+handle_signal                                     CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+info_window                                       CMakeFiles/server.dir/functions.c.o
+init_ncurses                                      CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+init_objects                                      CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+init_players                                      CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+initscr@@NCURSES6_5.0.19991023                    /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+l_treasures                                       CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+main                                              CMakeFiles/server.dir/main.c.o
+                                                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o
+map                                               CMakeFiles/server.dir/functions.c.o
+map_window                                        CMakeFiles/server.dir/functions.c.o
+mmap                                              CMakeFiles/server.dir/main.c.o
+mvwprintw@@NCURSES6_5.0.19991023                  /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+newwin@@NCURSES6_5.0.19991023                     /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+noecho@@NCURSES6_5.0.19991023                     /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+players                                           CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_bushes                                      CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_campsite                                    CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_coins                                       CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_info                                        CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_map                                         CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+print_players                                     CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+puts@@GLIBC_2.2.5                                 /lib/x86_64-linux-gnu/libc.so.6
+                                                  CMakeFiles/server.dir/main.c.o
+rand@@GLIBC_2.2.5                                 /lib/x86_64-linux-gnu/libc.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+refresh_all                                       CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+sem_close@@GLIBC_2.2.5                            /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  CMakeFiles/server.dir/main.c.o
+sem_init@@GLIBC_2.2.5                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  CMakeFiles/server.dir/main.c.o
+sem_post@@GLIBC_2.2.5                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libpthread.so
+                                                  CMakeFiles/server.dir/functions.c.o
+send_map                                          CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+shm_open@@GLIBC_2.2.5                             /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/librt.so
+                                                  CMakeFiles/server.dir/main.c.o
+shm_unlink@@GLIBC_2.2.5                           /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/librt.so
+                                                  CMakeFiles/server.dir/main.c.o
+sigaction                                         CMakeFiles/server.dir/main.c.o
+srand@@GLIBC_2.2.5                                /lib/x86_64-linux-gnu/libc.so.6
+                                                  CMakeFiles/server.dir/main.c.o
+stdscr                                            CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+time                                              CMakeFiles/server.dir/main.c.o
+treasures                                         CMakeFiles/server.dir/functions.c.o
+                                                  CMakeFiles/server.dir/main.c.o
+waddch@@NCURSES6_5.0.19991023                     /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+wborder@@NCURSES6_5.0.19991023                    /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+wgetch@@NCURSES6_5.0.19991023                     /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/main.c.o
+winch@@NCURSES6_5.0.19991023                      /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+wmove@@NCURSES6_5.0.19991023                      /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+wrefresh@@NCURSES6_5.0.19991023                   /usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/libncurses.so.6
+                                                  CMakeFiles/server.dir/functions.c.o
+wtimeout                                          CMakeFiles/server.dir/functions.c.o

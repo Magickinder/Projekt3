@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -ggdb3 -fuse-ld=gold -Wl,-Map=main.map -Wl,-cref CMakeFiles/server.dir/functions.c.o CMakeFiles/server.dir/main.c.o  -o server  -lncurses -lpthread -lrt 
