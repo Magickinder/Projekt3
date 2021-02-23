@@ -8,7 +8,7 @@ void init_ncurses(){
     cbreak();
     noecho();
     curs_set(0);
-    timeout(200);
+    timeout(500);
     map_window = newwin(MAP_HEIGHT + 2, MAP_WIDTH + 2, 0, 0);
     info_window = newwin(INFO_HEIGHT + 2, INFO_WIDTH + 2, 0, MAP_WIDTH + 4);
     box(info_window, 0, 0);
@@ -38,20 +38,20 @@ void print_info(struct player_map_data *pdata, int servers_pid){
     
     mvwprintw(info_window, ++y_offset, 1, "Server's PID: %d", servers_pid);
     mvwprintw(info_window, ++y_offset, 1, " Campsite X/Y: unknown");
-    mvwprintw(info_window, ++y_offset, 1, " Round number: ");
+    mvwprintw(info_window, ++y_offset, 1, " Round number: %d", pdata->round_number);
 
     y_offset += 3;
 
     mvwprintw(info_window, ++y_offset, 1, "Player:");
     mvwprintw(info_window, ++y_offset, 1, " Number:  %d", pdata->player.number);
     mvwprintw(info_window, ++y_offset, 1, " TYPE        HUMAN");
-    mvwprintw(info_window, ++y_offset, 1, " Curr X/Y    %d/%d", pdata->player.x, pdata->player.y);
+    mvwprintw(info_window, ++y_offset, 1, " Curr X/Y    %02d/%02d", pdata->player.x, pdata->player.y);
     mvwprintw(info_window, ++y_offset, 1, " Deaths      %d", pdata->player.deaths);
 
     y_offset += 3;
 
-    mvwprintw(info_window, ++y_offset, 1, "Coins found %d", pdata->player.coins_carried);
-    mvwprintw(info_window, ++y_offset, 1, "Coins brought %d", pdata->player.coins_brought);
+    mvwprintw(info_window, ++y_offset, 1, "Coins found %04d", pdata->player.coins_carried);
+    mvwprintw(info_window, ++y_offset, 1, "Coins brought %04d", pdata->player.coins_brought);
 
     y_offset += 3;
 

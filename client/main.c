@@ -36,6 +36,8 @@ int main(void){
     }while(res != 1);
 
     init_ncurses();
+    
+    pdata->player.PID = getpid();
 
     char c;
     while(1){

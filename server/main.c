@@ -1,11 +1,8 @@
 #include "functions.h"
 
-#define SHM_NAME "Project"
-
 int main(void){
     srand(time(0));
 
-    //shm_unlink(SHM_NAME);
     int result = shm_open(SHM_NAME, O_CREAT | O_EXCL | O_RDWR, 0606);
     if(result == -1){
         printf("Error\n");
@@ -27,33 +24,37 @@ int main(void){
         return -3;
     }
 
-    {
-        struct sigaction sigusrSignal;
-        sigusrSignal.sa_flags = SA_SIGINFO;
-        sigusrSignal.sa_sigaction = handle_signal;
-        assert(!sigaction(SIGUSR1, &sigusrSignal, NULL));
-    }
+    struct sigaction sigusrSignal;
+    memset(&sigusrSignal, 0, sizeof(struct sigaction));
+    sigusrSignal.sa_flags = SA_SIGINFO;
+    sigusrSignal.sa_sigaction = handle_signal;
+    assert(!sigaction(SIGUSR1, &sigusrSignal, NULL));
+    
+    struct sigaction sigIntSignal;
+    memset(&sigIntSignal, 0, sizeof(struct sigaction));
+    sigIntSignal.sa_flags = SA_SIGINFO;
+    sigIntSignal.sa_sigaction = handle_bad_exit;
+    assert(!sigaction(SIGINT, &sigIntSignal, NULL));
 
     sem_init(&(pdata->sem), 1, 0);
+    
+    pthread_t th1, th2;
 
     init_ncurses();
     init_players();
+    init_beast();
+    
     print_map();
     print_players();
+    print_beast();
     print_campsite();
+    print_bushes();
     init_objects();
+    
+    pthread_create(&th2, NULL, game_logic, (void *)pdata);
+    pthread_create(&th1, NULL, beast_behaviour, NULL);
 
     while(1){
-        //Do oddzielnego watku
-        print_map();
-        print_players();
-        print_coins();
-        print_campsite();
-        print_bushes();
-        print_info();
-        refresh_all();
-        send_map(pdata);
-
         switch(getch()){
             case 'c':
                 generate_coin();
@@ -73,6 +74,8 @@ int main(void){
             default:
             break;
         }
+        
+        pdata->round_number++;
     }
     end:
 

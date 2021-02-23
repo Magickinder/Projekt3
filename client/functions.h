@@ -28,18 +28,24 @@
 #define CAMPSITE_X 3
 #define CAMPSITE_Y 4
 
+enum move {UP, DOWN, LEFT, RIGHT, NONE};
+
 struct player_t{
     int x, y;
+    int start_x, start_y;
     int number;
     int coins_carried;
     int coins_brought;
     int deaths;
+    int PID;
+    enum move next_move;
 };
 
 struct player_map_data{
     sem_t sem;
     struct player_t player;
     wchar_t map[PLAYER_VISIBILITY_Y][PLAYER_VISIBILITY_X];
+    int round_number;
 };
 
 void init_ncurses();
