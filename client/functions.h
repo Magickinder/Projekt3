@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 #include <time.h>
+#include <pthread.h>
 #include <semaphore.h>
 #include <sys/mman.h>
 #include <signal.h>
@@ -28,16 +30,21 @@
 #define CAMPSITE_X 3
 #define CAMPSITE_Y 4
 
+#define SHM_NAME "Project"
+
 enum move {UP, DOWN, LEFT, RIGHT, NONE};
 
 struct player_t{
     int x, y;
     int start_x, start_y;
     int number;
+    int type; // 1 - Human, 2 - CPU
     int coins_carried;
     int coins_brought;
     int deaths;
     int PID;
+    int campsite_spotted; // 1 - not encountered, 2 - encountered
+    int on_bush; //1 - not on bush, 2 - on bush
     enum move next_move;
 };
 

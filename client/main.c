@@ -1,7 +1,5 @@
 #include "functions.h"
 
-#define SHM_NAME "Project"
-
 int main(void){
     int pid, result = 0;
 
@@ -37,7 +35,7 @@ int main(void){
 
     init_ncurses();
     
-    pdata->player.PID = getpid();
+    sigqueue(pid, SIGUSR1, (union sigval){.sival_int = 1});
 
     char c;
     while(1){
@@ -57,6 +55,7 @@ int main(void){
     }
     //end:
 
+    sigqueue(pid, SIGUSR1, (union sigval){.sival_int = 0});
     sem_close(&(pdata->sem));
     close(result);
     shm_unlink(SHM_NAME);

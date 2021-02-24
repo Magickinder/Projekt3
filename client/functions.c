@@ -8,9 +8,9 @@ void init_ncurses(){
     cbreak();
     noecho();
     curs_set(0);
-    timeout(500);
+    timeout(200);
     map_window = newwin(MAP_HEIGHT + 2, MAP_WIDTH + 2, 0, 0);
-    info_window = newwin(INFO_HEIGHT + 2, INFO_WIDTH + 2, 0, MAP_WIDTH + 4);
+    info_window = newwin(INFO_HEIGHT + 2, INFO_WIDTH + 2, 0, MAP_WIDTH + 2 + 2);
     box(info_window, 0, 0);
 }
 
@@ -36,8 +36,16 @@ void print_map(struct player_map_data *pdata){
 void print_info(struct player_map_data *pdata, int servers_pid){
     int y_offset = 0;
     
+    werase(info_window);
+    box(info_window, 0, 0);
+    
     mvwprintw(info_window, ++y_offset, 1, "Server's PID: %d", servers_pid);
-    mvwprintw(info_window, ++y_offset, 1, " Campsite X/Y: unknown");
+    
+    if(pdata->player.campsite_spotted == 1)
+        mvwprintw(info_window, ++y_offset, 1, " Campsite X/Y: unknown");
+    else
+        mvwprintw(info_window, ++y_offset, 1, " Campsite X/Y: %d/%d", CAMPSITE_X, CAMPSITE_Y);
+    
     mvwprintw(info_window, ++y_offset, 1, " Round number: %d", pdata->round_number);
 
     y_offset += 3;

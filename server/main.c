@@ -43,6 +43,8 @@ int main(void){
     init_ncurses();
     init_players();
     init_beast();
+    players[0].type = 1;
+    players[0].PID = getpid();
     
     print_map();
     print_players();
@@ -54,28 +56,35 @@ int main(void){
     pthread_create(&th2, NULL, game_logic, (void *)pdata);
     pthread_create(&th1, NULL, beast_behaviour, NULL);
 
+    char c = 0;
     while(1){
-        switch(getch()){
-            case 'c':
-                generate_coin();
+        c = getch();
+        if(c != -1){
+            switch(c){
+                case 'c':
+                    generate_coin();
+                    break;
                 break;
-            break;
-            case 't':
-                generate_treasure();
+                case 't':
+                    generate_treasure();
+                    break;
                 break;
-            break;
-            case 'T':
-                generate_l_treasure();
+                case 'T':
+                    generate_l_treasure();
+                    break;
                 break;
-            break;
-            case 'q':
-            case 'Q':
-                goto end;
-            default:
-            break;
+                case 'q':
+                case 'Q':
+                    goto end;
+                default:
+                    if(c == 27){
+                        getch();
+                        c = getch();
+                    }
+                    handleKey(c);
+                break;
+            }
         }
-        
-        pdata->round_number++;
     }
     end:
 
